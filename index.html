@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,800;1,400;1,700&display=swap" rel="stylesheet">
+
+<style type="text/css">
+
+	@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+		html{background-color: #CD7D58; font-family: 'Noto Sans KR', sans-serif;   background-image: url(time.gif); no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;; background-blend-mode: color-dodge;}
+	
+		header{background: url();}
+		h1{color: #1C2020; text-align: center;font-family: 'Playfair Display', serif;}
+		h2{color: #1C2020; text-align: center;}
+		p{color: white; text-align: center;}
+		a{display: inline-block;
+			background: white;
+			color: #1C2020;
+			width: 300px; height: 50px; 
+			text-align: center;
+			line-height: 50px;
+			text-decoration: none;
+			align-items: : center;
+			font-weight: bold;
+			border-radius: 5px;
+			/*border:1px solid darkgray;*/
+			box-shadow: 0px 0px 3px gray;
+			color: black
+			margin-bottom:30px;}
+		a:hover{
+			background: #CD7D58;
+			box-shadow: none;
+			color: white;
+			transition: all 0.5s; 
+		}
+		.title{font-size: 4em; font-style: italic; margin-bottom: 0; margin-top: 100px}
+		.subtitle{color: darkgray; margin-top: 0; margin-bottom: 50px; font-size: 14px; }
+		.blink{margin-bottom: 20px}
+		.marginbottom0{margin-bottom: 0px;}
+		.marginbottom40{margin-bottom: 40px;}
+		.textkorean{font-family: 'twaysky';}
+		.fontbig{font-size: 32px;}
+		.fontbig2{font-size: 16px;}
+		.fontthick{font-weight: 600;}
+		
+		.orange{color: #CD7D58; text-align: center}
+		.gray{color: gray}
+		.colorblack{color:#1C2020;}
+		.row{width: 400px; height: 30px; margin-top: 100px; background: none;margin: auto; position: relative; color: white; text-align: center;border-radius: 30px}
+		.rowsub{margin-top: 30px}
+		.orangebox{background-color: #CD7D58; height: 50px; text-align: right; color: white} 
+		.smalltitle{text-align: left}
+		.smalltitle2{text-align: center}
+		.smalltitle3{text-align: left; color:gray;}
+		.temporary{width: 1000px; height:300px;background-color: white; margin: 30px}
+		.temporary2{width: 1000px; height:200px;background-color: #1C2020;}
+		.sticker1{left: 620px; width: 300px; top:200px; position: absolute; }
+
+		.input1  {width: 300px; height: 50px;border-radius: 5px; border:0; outline: 0;font-family: 'Noto Sans KR', sans-serif;position: relative;text-align: center; font-size: 16px; font-weight: 600; color:#CD7D58; margin-top: 0px;}
+		#input2
+		{display: inline-block;
+			background: white;
+			color: #1C2020;
+			width: 300px; height: 50px; 
+			text-align: center;
+			line-height: 50px;
+			text-decoration: none;
+			align-items: : center;
+			font-weight: bold;
+			border-radius: 5px;
+			/*border:1px solid darkgray;*/
+			box-shadow: 0px 0px 3px gray;
+			color: black
+			margin-bottom:30px;
+			font-size: 16px; font-weight: 600;font-family: 'Noto Sans KR', sans-serif;border:0; outline: 0;}
+		#input2:hover
+		{background: #CD7D58;
+			box-shadow: none;
+			color: white;
+			transition: all 0.5s;}
+
+		.timer {font-family: 'twaysky', serif; font-size: 100px;}
+
+
+
+	</style>
+		<script type="text/javascript">
+			
+
+		</script>
+</head>
+<body>
+		<header>
+		<div>
+			<img src="https://media.giphy.com/media/THfG5yu0bwB90zI3To/giphy.gif" class="absolute sticker1">
+			<h1 class="title">Countdown to the past</h1>
+			
+			<p class="blink colorblack">위저드 베이커리를 이용하셔서 만족스러우셨습니까?
+						<section>
+		<div class="blank">
+			<h1 class=" textkorean ">.</h1>
+			<p class=" textkorean fontbig colorblack ">사는 게 너무 고통스러운 당신, <br>시간을 되돌리고 싶은 적이 있는가? </p>
+			<p class="colorblack fontbig2 fontthick">타임 리와인더를 실행하는 카운트다운을 시작합니다. <br> 타임 리와인더는 당신이 원하는 그 시간대로 당신을 데려다줍니다.</p>
+			<p class="fontbig2"><span style="background-color: #1C2020;">어떤가요. 또 다시 같은 선택을 하지 않을 자신이 있나요?</span></p>
+		</div>
+	</section>
+
+<p class="timer" id="demo"></p>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (seconds == 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Return?";
+  }
+}, 1000);
+</script>
+
+
+			
+		</div>
+		</header>
+</body>
+</html>
